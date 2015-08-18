@@ -2,4 +2,11 @@
 <resources>
     <color name="primary">#ff9b9b9b</color>
     <color name="primary_dark">#ff787878</color>
+    
+    <color name="from1">#ff7baf</color>
+    <color name="to1">#ffac5b</color>
+    <color name="from2">#d7ff68</color>
+    <color name="to2">#7ed9ff</color>
+    <color name="from3">#5cbddd</color>
+    <color name="to3">#64be5a</color>
 </resources>

@@ -2,7 +2,6 @@ package ru.litun.modernart;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.drawable.PaintDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -11,7 +10,7 @@ import android.view.View;
  */
 public class ColorRectangleView extends View {
     //private final Paint paint = new Paint();
-    PaintDrawable drawable = new PaintDrawable();
+    //PaintDrawable drawable = new PaintDrawable();
     private final MyColor currentColor = new MyColor();
 
     public ColorRectangleView(Context context, AttributeSet attrs) {
@@ -40,7 +39,6 @@ public class ColorRectangleView extends View {
 
     public void updateColor(int progress) {
         currentColor.proportionChanges(progress);
-
 //        refreshDrawableState();
 //        drawableStateChanged();
         postInvalidate();
