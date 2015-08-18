@@ -15,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initColors();
+        initViews();
+    }
 
+    private void initViews() {
         // rect 3 & 6 stable
 
         final ColorRectangleView rectangle1 = (ColorRectangleView) findViewById(R.id.rect1);
@@ -54,10 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    private void initColors() {
-
     }
 
     @Override
