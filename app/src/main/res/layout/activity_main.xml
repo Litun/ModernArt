@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--tollbar-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ru.litun.modernart.ColorRectangleView
+            android:id="@+id/rect1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/margin" />
+
+        <ru.litun.modernart.ColorRectangleView
+            android:id="@+id/rect2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rect1"
+            android:layout_margin="@dimen/margin" />
+
+        <ru.litun.modernart.ColorRectangleView
+            android:id="@+id/rect3"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rect1"
+            android:layout_margin="@dimen/margin"
+            android:layout_toLeftOf="@+id/rect2" />
+
+        <ru.litun.modernart.ColorRectangleView
+            android:id="@+id/rect4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rect5"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rect3"
+            android:layout_margin="@dimen/margin"
+            android:layout_toLeftOf="@+id/rect2" />
+
+        <ru.litun.modernart.ColorRectangleView
+            android:id="@+id/rect5"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/margin"
+            android:layout_toLeftOf="@+id/rect6" />
+
+        <ru.litun.modernart.ColorRectangleView
+            android:id="@+id/rect6"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/rect5"
+            android:layout_margin="@dimen/margin"
+            android:layout_toLeftOf="@+id/rect2" />
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
