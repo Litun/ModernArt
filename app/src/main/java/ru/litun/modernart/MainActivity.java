@@ -1,7 +1,11 @@
 package ru.litun.modernart;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -73,10 +77,34 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_info) {
+            momaDialog();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void momaDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("MoMA | Museum of Modern Art")
+                .setMessage("Learn more")
+                .setCancelable(false)
+                .setNegativeButton("Not Now",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        })
+                .setPositiveButton("Visit MoMA",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.moma.org"));
+                                startActivity(browserIntent);
+                            }
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }
